@@ -1,14 +1,13 @@
 import "./App.css";
-import Header from "./Components/Header";
-import StaticSideBar from "./Components/StaticSideBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WrappedHome from "./Components/Home";
 function App() {
   return (
-    <div className="flex w-full">
-      <StaticSideBar />
-      <div className=" w-90 min-h-screen">
-        <Header />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<WrappedHome />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

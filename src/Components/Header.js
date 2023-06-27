@@ -19,17 +19,16 @@ function Header() {
           </label>
         </div>
         <div className="flex justify-center items-center">
-          <img src={Support} />
+          <img src={Support} alt="" />
         </div>
         <div className="flex justify-center items-center">
-          <img src={Setting} />
+          <img src={Setting} alt="" />
         </div>
         <div className="flex justify-center items-center">
-          <img src={Remainder} />
+          <img src={Remainder} alt="" />
         </div>
       </div>
     </div>
   );
 }
-
 export default Header;

@@ -9,9 +9,14 @@ module.exports = {
       },
     },
     colors: {
+      "custom-black": "#ccc",
+      "custom-red": "red",
+      "custom-blue": "blue",
       "border-color": "#D9D9D9",
       "brand-name-color": "#481212",
-      "toggle-switch": "#D0A34C",
+      "new-tag": "#FF5C42",
+      "white-color": "#fff",
+      "theme-text-color": "#7B7B7B",
     },
     fontFamily: {
       karla: ["karla"],
