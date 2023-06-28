@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className="p-3 flex justify-between items-center border-b-[1px] border-border-color">
       <div>
-        <span className="text-brand-name-color font-bold font-karla text-xs">
+        <span className="text-brand-name-color font-bold font-karla text-base	">
           Sumangali Silks
         </span>
       </div>

@@ -17,6 +17,8 @@ module.exports = {
       "new-tag": "#FF5C42",
       "white-color": "#fff",
       "theme-text-color": "#7B7B7B",
+      "branch-floor": "#271E0D",
+      "save-clr": "#D0A34C",
     },
     fontFamily: {
       karla: ["karla"],
