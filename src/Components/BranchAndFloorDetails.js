@@ -4,6 +4,7 @@ import HOC from "./HOC";
 import { Link } from "react-router-dom";
 import View from "../Assets/Icons/View.svg";
 import Edit from "../Assets/Icons/Edit.svg";
+import HomeHOC from "./HomeHOC";
 
 function BranchAndFloorDetails() {
   const Details = [
@@ -18,8 +19,7 @@ function BranchAndFloorDetails() {
     { label: "Head Branch", value: "Chennai" },
   ];
   return (
-    <div className="flex w-100 h-screen">
-      <HomePageMenu />
+    <div className="flex w-100 h-screen grow">
       <div className="grow bg-[#F7F6F4] h-100 p-5">
         <div className="flex justify-between">
           <div>
@@ -68,4 +68,5 @@ function BranchAndFloorDetails() {
 }
 const BranchAndFloorDetailsComp = HOC(BranchAndFloorDetails);
 
-export default BranchAndFloorDetailsComp;
+const WrappedHome = HomeHOC(BranchAndFloorDetailsComp);
+export default WrappedHome;

@@ -31,7 +31,10 @@ function HomePageMenu() {
     },
   ];
   return (
-    <div className="w-2/12 p-1 flex flex-col gap-4 bg-[0px 4px 24px -8px]">
+    <div
+      id="toggle-menu"
+      className="w-2/12 p-1 flex flex-col gap-4 bg-[0px 4px 24px -8px]"
+    >
       {navLink.map((link, i) => {
         return (
           <div key={i}>
