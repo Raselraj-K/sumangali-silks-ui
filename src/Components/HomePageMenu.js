@@ -42,13 +42,11 @@ function HomePageMenu() {
               key={i}
               className="p-2 flex justify-between cursor-pointer text-theme-text-color text-lg font-medium items-center"
             >
-              {link.name}
-              {link.name === "Enterprise Master" ? (
+              <span className="hover:text-clr-hover">{link.name}</span>
+              {link.name === "Enterprise Master" && (
                 <span className="bg-new-tag text-xs p-1 rounded-sm text-white-color">
                   New
                 </span>
-              ) : (
-                ""
               )}
               <img src={RightArrow} alt="" />
             </Link>

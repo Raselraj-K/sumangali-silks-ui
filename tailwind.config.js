@@ -19,6 +19,7 @@ module.exports = {
       "theme-text-color": "#7B7B7B",
       "branch-floor": "#271E0D",
       "save-clr": "#D0A34C",
+      "clr-hover": "#D0A34C",
     },
     fontFamily: {
       karla: ["karla"],
