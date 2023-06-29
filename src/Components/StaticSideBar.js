@@ -59,34 +59,6 @@ function StaticSideBar() {
           </NavLink>
         );
       })}
-      {/* <div className="si-profile flex flex-col justify-center cursor-pointer items-center">
-        <img
-          className="h-8 w-8 rounded-full"
-          src="https://lh3.googleusercontent.com/ogw/AOLn63G_za-DTqZRehnaViBROuGguI69GAY7Q1ebdLULJw=s64-c-mo"
-          alt=""
-        />
-        <span className="text-xs font-medium font-karla">Admin</span>
-      </div>
-      <div className="si-home flex flex-col justify-center cursor-pointer items-center ">
-        <img className="h-6 w-6" src={HomeIcon} alt="" />
-        <span className="text-xs font-medium font-karla">Home</span>
-      </div>
-      <div className="si-home flex flex-col justify-center cursor-pointer items-center ">
-        <img className="h-5 w-5" src={IMS} alt="" />
-        <span className="text-xs font-medium font-karla">IMS</span>
-      </div>
-      <div className="si-home flex flex-col justify-center cursor-pointer items-center ">
-        <img className="h-5 w-5" src={FMS} alt="" />
-        <span className="text-xs font-medium font-karla">FMS</span>
-      </div>
-      <div className="si-home flex flex-col justify-center cursor-pointer items-center ">
-        <img className="h-5 w-5" src={IMS} alt="" />
-        <span className="text-xs font-medium font-karla">IMS</span>
-      </div>
-      <div className="si-home flex flex-col justify-center cursor-pointer items-center ">
-        <img className="h-5 w-5" src={CRM} alt="" />
-        <span className="text-xs font-medium font-karla">CRM</span>
-      </div> */}
     </div>
   );
 }
