@@ -16,7 +16,7 @@ import HOC from "./HOC";
 import HomeHOC from "./HomeHOC";
 import { useNavigate } from "react-router-dom";
 
-function EnterpriseMaster() {
+function BranchList() {
   const navigate = useNavigate();
   const [filter, setfilter] = useState(false);
   const handleChangePage = () => {
@@ -237,6 +237,6 @@ function EnterpriseMaster() {
   );
 }
 
-const WrappedHome1 = HOC(EnterpriseMaster);
-const WrappedHome2 = HomeHOC(WrappedHome1);
-export default WrappedHome2;
+const WrappedHome1 = HOC(BranchList);
+const WrappedComponent = HomeHOC(WrappedHome1);
+export default WrappedComponent;

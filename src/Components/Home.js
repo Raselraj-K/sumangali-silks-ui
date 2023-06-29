@@ -1,12 +1,12 @@
 import React from "react";
 import HOC from "./HOC";
 import HomeHOC from "./HomeHOC";
-import EnterpriseMaster from "./EnterpriseMaster";
+import BranchList from "./BranchList";
 
 function Home() {
   return (
     <>
-      <EnterpriseMaster />
+      <BranchList />
     </>
   );
 }
