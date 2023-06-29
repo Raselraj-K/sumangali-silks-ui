@@ -1,10 +1,12 @@
 import React from "react";
 import HOC from "./HOC";
-import HomePageMenu from "./HomePageMenu";
 import { Link } from "react-router-dom";
 import View from "../Assets/Icons/View.svg";
 import Config from "../Assets/Icons/Config.svg";
 import Save from "../Assets/Icons/Save.svg";
+import $ from "jquery";
+import HomeHOC from "./HomeHOC";
+import Toggle from "../Assets/Icons/Toggle.svg";
 function CreateBranch() {
   const Labels = [
     "Branch Name",
@@ -17,10 +19,15 @@ function CreateBranch() {
     "Pin Code",
     "Head Branch",
   ];
+  const handleToggle = () => {
+    $("#toggle-menu").animate({
+      width: "toggle",
+    });
+  };
   return (
-    <div className="flex w-100 h-screen">
-      <HomePageMenu />
-      <div className="grow bg-[#F7F6F4] h-100 p-5">
+    <div className="grow bg-[#F7F6F4]">
+      <img src={Toggle} className="cursor-pointer" onClick={handleToggle} />
+      <div className=" h-100 p-5">
         <div className="flex justify-between">
           <div>
             <span className="text-[#271E0D] text-base font-semibold	">
@@ -89,5 +96,6 @@ function CreateBranch() {
     </div>
   );
 }
-const CreatBranchComp = HOC(CreateBranch);
-export default CreatBranchComp;
+const WrappedHome1 = HOC(CreateBranch);
+const WrappedHome2 = HomeHOC(WrappedHome1);
+export default WrappedHome2;
