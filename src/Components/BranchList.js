@@ -77,10 +77,10 @@ function BranchList() {
         onClick={handleToggle}
       />
       <div className="p-5 ">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center ">
           <div>
-            <span className="text-[#271E0D] text-base font-semibold	">
-              Branch & Floor
+            <span className="text-[#271E0D] text-base	font-semibold	font-montserrat">
+              Branch
             </span>
           </div>
 
@@ -88,14 +88,14 @@ function BranchList() {
             to="branch-create"
             className="flex items-center gap-2 border-solid border-[2px] border-[#D9D9D9] p-1 rounded"
           >
-            <span className="text-[#494C54] text-base font-medium	">
+            <span className="text-[#494C54] text-lg font-medium font-montserrat">
               Add New
             </span>
             <img src={Add} alt="" />
           </Link>
         </div>
         <div className="bg-[#fff] mt-5 shadow-sm rounded">
-          <h4 className="text-[#271E0D] text-sm font-semibold p-2 border-b-[1px] border-b-[#D9D9D9]">
+          <h4 className="text-[#271E0D] text-sm font-semibold p-2 border-b-[1px] border-b-[#D9D9D9] font-montserrat">
             Branch List
           </h4>
           <div className="flex justify-end p-3 gap-2">
@@ -105,51 +105,46 @@ function BranchList() {
                 setfilter((prev) => !prev);
               }}
             >
-              <span className="text-[#494C54] text-sm	font-medium">Filter</span>
+              <span className="text-[#494C54] text-sm	font-medium font-montserrat">
+                Filter
+              </span>
               <img src={Filter} alt="" />
             </div>
             <div className="flex gap-1 items-center cursor-pointer">
-              <span className="text-[#494C54] text-sm	font-medium">Config</span>
+              <span className="text-[#494C54] text-sm	font-medium font-montserrat">
+                Config
+              </span>
               <img src={Config} alt="" />
             </div>
           </div>
 
-          {/* Filter */}
+          {/**************** * Filter *********************/}
           {filter ? (
             <div className="flex p-3 flex-wrap justify-between">
               <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base	">
+                <span className="text-[#271E0D] text-base	font-montserrat">
                   Branch Name
-                  <span className="font-bold" style={{ color: "#FF5C42" }}>
-                    *
-                  </span>
                 </span>
                 <input
                   type="text"
                   className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded"
                   placeholder="Enter name"
+                  autoComplete="off"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base	">
+                <span className="text-[#271E0D] text-base font-montserrat">
                   Branch ID{" "}
-                  <span className="font-bold" style={{ color: "#FF5C42" }}>
-                    *
-                  </span>
                 </span>
                 <input
                   type="text"
                   placeholder="Enter ID"
+                  autoComplete="off"
                   className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base	">
-                  Parent{" "}
-                  <span className="font-bold" style={{ color: "#FF5C42" }}>
-                    *
-                  </span>
-                </span>
+                <span className="text-[#271E0D] text-base	">Parent </span>
                 <select className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded">
                   <option value="">Select Parent</option>
                   <option>Parent-1</option>
@@ -162,7 +157,7 @@ function BranchList() {
             ""
           )}
 
-          {/* Table */}
+          {/**************** * Table ********************/}
           <div>
             <TableContainer>
               <Table
@@ -177,7 +172,11 @@ function BranchList() {
                           key={i}
                           component="th"
                           scope="row"
-                          style={{ color: "#343A40", fontWeight: "700" }}
+                          style={{
+                            color: "#271E0D",
+                            fontWeight: "600",
+                            fontFamily: "Montserrat",
+                          }}
                         >
                           {name}
                         </TableCell>
@@ -195,32 +194,51 @@ function BranchList() {
                           style={{
                             textAlign: "left",
                             color: "#7B7B7B",
+                            fontFamily: "Montserrat",
                           }}
                         >
                           {item.id}
                         </TableCell>
                         <TableCell
-                          style={{ textAlign: "left", color: "#7B7B7B" }}
+                          style={{
+                            textAlign: "left",
+                            color: "#7B7B7B",
+                            fontFamily: "Montserrat",
+                          }}
                         >
                           {item.branch_name}
                         </TableCell>
                         <TableCell
-                          style={{ textAlign: "left", color: "#7B7B7B" }}
+                          style={{
+                            textAlign: "left",
+                            color: "#7B7B7B",
+                            fontFamily: "Montserrat",
+                          }}
                         >
                           {item.branch_id}
                         </TableCell>
                         <TableCell
-                          style={{ textAlign: "left", color: "#7B7B7B" }}
+                          style={{
+                            textAlign: "left",
+                            color: "#7B7B7B",
+                            fontFamily: "Montserrat",
+                          }}
                         >
                           {item.parent}
                         </TableCell>
                         <TableCell
-                          style={{ textAlign: "left", color: "#7B7B7B" }}
+                          style={{
+                            textAlign: "left",
+                            color: "#7B7B7B",
+                            fontFamily: "Montserrat",
+                          }}
                         >
                           {item.created_at}
                         </TableCell>
-                        <TableCell style={{ cursor: "pointer" }}>
-                          <img src={More} alt="" />
+                        <TableCell
+                          style={{ cursor: "pointer", textAlign: "right" }}
+                        >
+                          <img src={More} alt="" className="float-right" />
                         </TableCell>
                       </TableRow>
                     );
