@@ -26,7 +26,12 @@ function CreateBranch() {
   };
   return (
     <div className="grow bg-[#F7F6F4]">
-      <img src={Toggle} className="cursor-pointer" onClick={handleToggle} />
+      <img
+        src={Toggle}
+        alt=""
+        className="cursor-pointer"
+        onClick={handleToggle}
+      />
       <div className=" h-100 p-5">
         <div className="flex justify-between">
           <div>
@@ -85,7 +90,7 @@ function CreateBranch() {
           <div className="flex justify-end p-2 gap-2">
             <button className="p-1 rounded flex gap-1 justify-center items-center bg-save-clr">
               <span className="text-sm font-semibold text-[#fff]">Save</span>
-              <img src={Save} />
+              <img src={Save} alt="" />
             </button>
             <button className="border-[2px] border-[#D9D9D9] rounded p-1">
               Reset
