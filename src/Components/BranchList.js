@@ -70,7 +70,12 @@ function BranchList() {
   };
   return (
     <div className="grow bg-[#F7F6F4]">
-      <img src={Toggle} className="cursor-pointer" onClick={handleToggle} />
+      <img
+        src={Toggle}
+        alt=""
+        className="cursor-pointer"
+        onClick={handleToggle}
+      />
       <div className="p-5 ">
         <div className="flex justify-between">
           <div>

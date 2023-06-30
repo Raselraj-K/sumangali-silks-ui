@@ -35,7 +35,7 @@ function StaticSideBar() {
   ];
 
   return (
-    <div className=" w-10 min-h-screen pt-3.5 pl-1.5 pr-1.5 border-r-[1px] border-border-color flex flex-col gap-5 justify-start">
+    <div className=" w-10 min-h-screen pt-3.5 border-r-[1px] border-border-color flex flex-col gap-5 justify-start">
       <div className=" flex flex-col justify-center cursor-pointer items-center">
         <img
           className="h-8 w-8 rounded-full"

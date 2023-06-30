@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import StaticSideBar from "./StaticSideBar";
-import BranchList from "./BranchList";
 import HomePageMenu from "./HomePageMenu";
 
 function HOC(WrappedComponent) {
