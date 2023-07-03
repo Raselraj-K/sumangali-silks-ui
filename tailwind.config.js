@@ -23,6 +23,7 @@ module.exports = {
     },
     fontFamily: {
       karla: ["karla"],
+      montserrat: ["Montserrat"],
     },
   },
   plugins: [],

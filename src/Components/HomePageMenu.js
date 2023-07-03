@@ -91,16 +91,19 @@ function HomePageMenu() {
                 nav.event();
               }}
               key={i}
-              className="p-2 flex justify-between cursor-pointer text-theme-text-color text-lg font-medium items-center"
+              className="p-2 flex justify-between cursor-pointer text-theme-text-color font-medium items-center"
             >
-              <span>{nav.label}</span>
+              <span className="font-montserrat text-lg">{nav.label}</span>
               {nav.label === "Enterprise Master" && (
-                <span className="bg-new-tag text-xs p-1 rounded-sm text-white-color">
+                <span className="bg-new-tag text-xs px-1 rounded-sm text-white-color">
                   New
                 </span>
               )}
               <img src={RightArrow} alt="" />
             </Link>
+
+            {/************** Child Link ***************************/}
+
             <div className="flex flex-col ml-5 hidden" id={nav.id}>
               {nav.children.map((list) => {
                 return (
@@ -114,11 +117,11 @@ function HomePageMenu() {
                         borderRadius: "2px",
                       })}
                     ></NavLink>
-                    <span className="text-theme-text-color hover:text-clr-hover cursor-pointer text-base w-max">
+                    <span className="text-theme-text-color hover:text-clr-hover cursor-pointer text-base w-max font-karla">
                       {list.label}
                     </span>
                     {list.label === "Branch" && (
-                      <span className="bg-new-tag text-xs p-1 rounded-sm text-white-color">
+                      <span className="bg-new-tag text-xs px-1 rounded-sm text-white-color">
                         New
                       </span>
                     )}
