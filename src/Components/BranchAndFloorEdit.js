@@ -46,7 +46,7 @@ function BranchAndFloorEdit() {
             className="flex items-center gap-2 border-solid border-[2px] border-[#D9D9D9] p-1 rounded"
           >
             <span className="text-[#494C54] text-lg font-medium	font-montserrat">
-              View Lists
+              View List
             </span>
             <img src={View} alt="" />
           </Link>
