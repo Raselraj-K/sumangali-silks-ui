@@ -15,6 +15,7 @@ import $ from "jquery";
 import HOC from "./HOC";
 import HomeHOC from "./HomeHOC";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function BranchList() {
   const navigate = useNavigate();
@@ -69,190 +70,185 @@ function BranchList() {
     });
   };
   return (
-    <div className="grow bg-[#F7F6F4]">
-      <img
-        src={Toggle}
-        alt=""
-        className="cursor-pointer"
-        onClick={handleToggle}
-      />
-      <div className="p-5 ">
-        <div className="flex justify-between items-center ">
-          <div>
-            <span className="text-[#271E0D] text-base	font-semibold	font-montserrat">
-              Branch
-            </span>
-          </div>
+    <div className="grow">
+      <div className=" bg-[#F7F6F4]  h-screen">
+        <img
+          src={Toggle}
+          alt=""
+          className="cursor-pointer"
+          onClick={handleToggle}
+        />
+        <div className="pt-[8px] pl-[20px] pr-[20px]">
+          <div className="flex justify-between items-center ">
+            <div>
+              <span className="text-[#271E0D] text-2xl	font-semibold	font-montserrat">
+                Branch
+              </span>
+            </div>
 
-          <Link
-            to="branch-create"
-            className="flex items-center gap-2 border-solid border-[2px] border-[#D9D9D9] p-1 rounded"
-          >
-            <span className="text-[#494C54] text-lg font-medium font-montserrat">
-              Add New
-            </span>
-            <img src={Add} alt="" />
-          </Link>
-        </div>
-        <div className="bg-[#fff] mt-5 shadow-sm rounded">
-          <h4 className="text-[#271E0D] text-sm font-semibold p-2 border-b-[1px] border-b-[#D9D9D9] font-montserrat">
-            Branch List
-          </h4>
-          <div className="flex justify-end p-3 gap-2">
-            <div
-              className="flex gap-1 items-center cursor-pointer"
-              onClick={() => {
-                setfilter((prev) => !prev);
-              }}
+            <Link
+              to="branch-create"
+              className="flex items-center gap-2 border-solid border-[2px] border-[#D9D9D9] pt-[8px] pb-[8px] pl-[12px] pr-[12px] rounded"
             >
-              <span className="text-[#494C54] text-sm	font-medium font-montserrat">
-                Filter
+              <span className="text-[#494C54] text-lg font-medium font-montserrat">
+                Add New
               </span>
-              <img src={Filter} alt="" />
-            </div>
-            <div className="flex gap-1 items-center cursor-pointer">
-              <span className="text-[#494C54] text-sm	font-medium font-montserrat">
-                Config
-              </span>
-              <img src={Config} alt="" />
-            </div>
+              <img src={Add} alt="" />
+            </Link>
           </div>
-
-          {/**************** * Filter *********************/}
-          {filter ? (
-            <div className="flex p-3 flex-wrap justify-between">
-              <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base	font-montserrat">
-                  Branch Name
+          <div className="bg-[#fff] mx-2 mt-[32px] shadow-sm rounded">
+            <h4 className="text-[#271E0D] text-xl font-semibold pt-[16px] pb-[16px] pl-[24px] pr-[24px] border-b-[1px] border-b-[#D9D9D9] font-montserrat">
+              Branch List
+            </h4>
+            <div className="flex justify-end py-6 px-6 gap-8">
+              <div
+                className="flex gap-2 items-center cursor-pointer "
+                onClick={() => {
+                  setfilter((prev) => !prev);
+                }}
+              >
+                <span className="text-[#494C54] text-xl	font-medium font-montserrat">
+                  Filter
                 </span>
-                <input
-                  type="text"
-                  className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded"
-                  placeholder="Enter name"
-                  autoComplete="off"
-                />
+                <img src={Filter} alt="" />
               </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base font-montserrat">
-                  Branch ID{" "}
+              <div className="flex gap-2 items-center cursor-pointer">
+                <span className="text-[#494C54] text-xl	font-medium font-montserrat">
+                  Config
                 </span>
-                <input
-                  type="text"
-                  placeholder="Enter ID"
-                  autoComplete="off"
-                  className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[#271E0D] text-base	">Parent </span>
-                <select className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded">
-                  <option value="">Select Parent</option>
-                  <option>Parent-1</option>
-                  <option>Parent-2</option>
-                  <option>Parent-3</option>
-                </select>
+                <img src={Config} alt="" />
               </div>
             </div>
-          ) : (
-            ""
-          )}
 
-          {/**************** * Table ********************/}
-          <div>
-            <TableContainer>
-              <Table
-                sx={{ minWidth: 500 }}
-                aria-label="custom pagination table"
-              >
-                <TableBody>
-                  <TableRow style={{ backgroundColor: "#FFE5B4" }}>
-                    {header.map((name, i) => {
+            {/**************** * Filter *********************/}
+            {filter ? (
+              <div className="flex pl-[24px] pr-[24px] pb-[32px] flex-wrap w-full gap-x-8">
+                <div className="flex flex-col gap-1 w-[30%]">
+                  <span className="text-[#271E0D] text-base	font-montserrat font-medium	">
+                    Branch Name
+                  </span>
+                  <input
+                    type="text"
+                    className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded"
+                    placeholder="Enter name"
+                    autoComplete="off"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1 w-[30%]">
+                  <span className="text-[#271E0D] text-base	font-medium	">
+                    Head Branch
+                  </span>
+                  <select className="p-1 border-solid border-[2px] border-[#D9D9D9] rounded">
+                    <option value="">Select Parent</option>
+                    <option>Parent-1</option>
+                    <option>Parent-2</option>
+                    <option>Parent-3</option>
+                  </select>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {/**************** * Table ********************/}
+            <div>
+              <TableContainer>
+                <Table
+                  sx={{ minWidth: 500 }}
+                  aria-label="custom pagination table"
+                >
+                  <TableBody>
+                    <TableRow style={{ backgroundColor: "#FFE5B4" }}>
+                      {header.map((name, i) => {
+                        return (
+                          <TableCell
+                            key={i}
+                            component="th"
+                            scope="row"
+                            style={{
+                              color: "#271E0D",
+                              fontWeight: "600",
+                              fontFamily: "Montserrat",
+                              fontSize: "18px",
+                            }}
+                          >
+                            {name}
+                          </TableCell>
+                        );
+                      })}
+                    </TableRow>
+                    {list.map((item, i) => {
                       return (
-                        <TableCell
+                        <TableRow
                           key={i}
-                          component="th"
-                          scope="row"
-                          style={{
-                            color: "#271E0D",
-                            fontWeight: "600",
-                            fontFamily: "Montserrat",
-                          }}
+                          className="cursor-pointer"
+                          onClick={showBranchDetails}
                         >
-                          {name}
-                        </TableCell>
+                          <TableCell
+                            style={{
+                              textAlign: "left",
+                              color: "#7B7B7B",
+                              fontFamily: "karla",
+                            }}
+                          >
+                            {item.id}
+                          </TableCell>
+                          <TableCell
+                            style={{
+                              textAlign: "left",
+                              color: "#7B7B7B",
+                              fontFamily: "karla",
+                            }}
+                          >
+                            {item.branch_name}
+                          </TableCell>
+                          <TableCell
+                            style={{
+                              textAlign: "left",
+                              color: "#7B7B7B",
+                              fontFamily: "karla",
+                            }}
+                          >
+                            {item.branch_id}
+                          </TableCell>
+                          <TableCell
+                            style={{
+                              textAlign: "left",
+                              color: "#7B7B7B",
+                              fontFamily: "karla",
+                            }}
+                          >
+                            {item.parent}
+                          </TableCell>
+                          <TableCell
+                            style={{
+                              textAlign: "left",
+                              color: "#7B7B7B",
+                              fontFamily: "karla",
+                            }}
+                          >
+                            {item.created_at}
+                          </TableCell>
+                          <TableCell
+                            style={{ cursor: "pointer", textAlign: "right" }}
+                          >
+                            <img src={More} alt="" className="float-right" />
+                          </TableCell>
+                        </TableRow>
                       );
                     })}
-                  </TableRow>
-                  {list.map((item, i) => {
-                    return (
-                      <TableRow
-                        key={i}
-                        className="cursor-pointer"
-                        onClick={showBranchDetails}
-                      >
-                        <TableCell
-                          style={{
-                            textAlign: "left",
-                            color: "#7B7B7B",
-                            fontFamily: "Montserrat",
-                          }}
-                        >
-                          {item.id}
-                        </TableCell>
-                        <TableCell
-                          style={{
-                            textAlign: "left",
-                            color: "#7B7B7B",
-                            fontFamily: "Montserrat",
-                          }}
-                        >
-                          {item.branch_name}
-                        </TableCell>
-                        <TableCell
-                          style={{
-                            textAlign: "left",
-                            color: "#7B7B7B",
-                            fontFamily: "Montserrat",
-                          }}
-                        >
-                          {item.branch_id}
-                        </TableCell>
-                        <TableCell
-                          style={{
-                            textAlign: "left",
-                            color: "#7B7B7B",
-                            fontFamily: "Montserrat",
-                          }}
-                        >
-                          {item.parent}
-                        </TableCell>
-                        <TableCell
-                          style={{
-                            textAlign: "left",
-                            color: "#7B7B7B",
-                            fontFamily: "Montserrat",
-                          }}
-                        >
-                          {item.created_at}
-                        </TableCell>
-                        <TableCell
-                          style={{ cursor: "pointer", textAlign: "right" }}
-                        >
-                          <img src={More} alt="" className="float-right" />
-                        </TableCell>
-                      </TableRow>
-                    );
-                  })}
-                </TableBody>
-                <TablePagination
-                  rowsPerPageOptions={[10, 25, 100]}
-                  count={10}
-                  rowsPerPage={10}
-                  page={1}
-                  onPageChange={handleChangePage}
-                />
-              </Table>
-            </TableContainer>
+                  </TableBody>
+                  <TablePagination
+                    rowsPerPageOptions={[10, 25, 100]}
+                    count={10}
+                    rowsPerPage={10}
+                    page={1}
+                    onPageChange={handleChangePage}
+                  />
+                </Table>
+              </TableContainer>
+            </div>
           </div>
         </div>
       </div>

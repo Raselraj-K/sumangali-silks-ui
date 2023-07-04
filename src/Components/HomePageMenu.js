@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import RightArrow from "../Assets/Icons/RightArrow.svg";
+
 import $ from "jquery";
+import MenuItems from "./MenuItems";
 function HomePageMenu() {
   const handleEnterPriseMaster = () => {
     $("#enterprise-master").toggle();
@@ -14,9 +14,8 @@ function HomePageMenu() {
   const sideMenu = [
     {
       label: "Enterprise Master",
-      event: handleEnterPriseMaster,
       to: "/",
-      id: "enterprise-master",
+
       children: [
         {
           label: "Floor",
@@ -24,7 +23,7 @@ function HomePageMenu() {
         },
         {
           label: "Branch",
-          to: "/branch",
+          to: "/",
         },
         {
           label: "Department",
@@ -46,9 +45,9 @@ function HomePageMenu() {
     },
     {
       label: "Employee Master",
-      event: handleEmployeeMaster,
+
       to: "/employee-master",
-      id: "employee-master",
+
       children: [
         {
           label: "Employee Floor",
@@ -79,59 +78,23 @@ function HomePageMenu() {
   ];
 
   return (
-    <div
-      id="toggle-menu"
-      className="w-2/12 p-1 flex flex-col gap-4 bg-[0px 4px 24px -8px]"
-    >
-      {sideMenu.map((nav, i) => {
-        return (
-          <div key={i}>
-            <Link
-              onClick={() => {
-                nav.event();
-              }}
-              key={i}
-              className="p-2 flex justify-between cursor-pointer text-theme-text-color font-medium items-center"
-            >
-              <span className="font-montserrat text-lg">{nav.label}</span>
-              {nav.label === "Enterprise Master" && (
-                <span className="bg-new-tag text-xs px-1 rounded-sm text-white-color">
-                  New
-                </span>
-              )}
-              <img src={RightArrow} alt="" />
-            </Link>
-
-            {/************** Child Link ***************************/}
-
-            <div className="flex flex-col ml-5 hidden" id={nav.id}>
-              {nav.children.map((list) => {
-                return (
-                  <div className="flex justify-start items-center w-max gap-2">
-                    <NavLink
-                      style={({ isActive }) => ({
-                        height: isActive && "4px",
-                        background: isActive && "#D0A34C",
-                        padding: isActive && "2px",
-                        width: "maxContent",
-                        borderRadius: "2px",
-                      })}
-                    ></NavLink>
-                    <span className="text-theme-text-color hover:text-clr-hover cursor-pointer text-base w-max font-karla">
-                      {list.label}
-                    </span>
-                    {list.label === "Branch" && (
-                      <span className="bg-new-tag text-xs px-1 rounded-sm text-white-color">
-                        New
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
+    <div className="w-[20%] " id="toggle-menu">
+      <div className="font-montserrat font-bold	text-sm pl-[8px] pr-[8px] pt-[24px] text-[#494C54]">
+        HRMS Masters
+      </div>
+      <div className="flex flex-col gap-1">
+        {sideMenu.map((nav, i) => {
+          return (
+            <div key={i}>
+              <MenuItems
+                title={nav.label}
+                path={nav.to}
+                subMenuItems={nav.children}
+              />
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

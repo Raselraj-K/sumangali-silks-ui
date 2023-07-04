@@ -5,13 +5,13 @@ import Remainder from "../Assets/Icons/Remainder.svg";
 
 function Header() {
   return (
-    <div className="p-3 flex justify-between items-center border-b-[1px] border-border-color">
+    <div className="pt-[12px] pb-[12px] pl-[34px] pr-[34px] flex justify-between items-center border-b-[1px] border-border-color">
       <div>
         <span className="text-brand-name-color font-bold font-montserrat text-base">
           Sumangali Silks
         </span>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-6">
         <div className="flex justify-center items-center">
           <label className="switch">
             <input type="checkbox" />

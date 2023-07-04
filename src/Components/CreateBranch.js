@@ -25,7 +25,7 @@ function CreateBranch() {
     });
   };
   return (
-    <div className="grow bg-[#F7F6F4]">
+    <div className="grow bg-[#F7F6F4] h-screen">
       <img
         src={Toggle}
         alt=""
@@ -55,8 +55,8 @@ function CreateBranch() {
           <h4 className="text-[#271E0D] text-sm font-semibold p-2 border-b-[1px] border-b-[#D9D9D9] font-montserrat">
             Add Branch
           </h4>
-          <div className="flex justify-end p-3 cursor-pointer gap-2">
-            <span className="text-[#494C54] text-sm	font-medium font-montserrat">
+          <div className="flex justify-end p-3 cursor-pointer gap-2 items-center">
+            <span className="text-[#494C54] text-xl	font-medium font-montserrat">
               Config
             </span>
             <img src={Config} alt="" />
