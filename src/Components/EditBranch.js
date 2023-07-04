@@ -8,7 +8,7 @@ import Toggle from "../Assets/Icons/Toggle.svg";
 import $ from "jquery";
 import Edit from "../Assets/Icons/Edit.svg";
 
-function BranchAndFloorEdit() {
+function EditBranch() {
   const Labels = [
     { name: "Branch Name", value: "Sumangali Silks" },
     { name: "Branch ID", value: "#BR00101" },
@@ -26,7 +26,7 @@ function BranchAndFloorEdit() {
     });
   };
   return (
-    <div className="grow bg-[#F7F6F4]">
+    <div className="grow bg-[#F7F6F4] h-screen">
       <img
         src={Toggle}
         alt=""
@@ -60,7 +60,7 @@ function BranchAndFloorEdit() {
             to="/branch-edit"
             className="flex justify-end p-3 cursor-pointer gap-2"
           >
-            <span className="text-[#494C54] text-sm	font-medium font-montserrat">
+            <span className="text-[#494C54] text-xl	font-medium font-montserrat">
               Edit
             </span>
             <img src={Edit} alt="" />
@@ -113,7 +113,7 @@ function BranchAndFloorEdit() {
   );
 }
 
-const BranchAndFloorEditComp = HOC(BranchAndFloorEdit);
+const EditBranchComp = HOC(EditBranch);
 
-const WrappedComp = HomeHOC(BranchAndFloorEditComp);
+const WrappedComp = HomeHOC(EditBranchComp);
 export default WrappedComp;

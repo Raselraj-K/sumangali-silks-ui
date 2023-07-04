@@ -2,8 +2,8 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WrappedComponent from "./Components/BranchList";
 import CreateBranch from "./Components/CreateBranch";
-import BranchAndFloorDetailsComp from "./Components/BranchAndFloorDetails";
-import BranchAndFloorEditComp from "./Components/BranchAndFloorEdit";
+import BranchAndFloorDetailsComp from "./Components/BranchDetails";
+import BranchAndFloorEditComp from "./Components/EditBranch";
 function App() {
   return (
     <Router>

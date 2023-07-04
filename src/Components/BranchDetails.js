@@ -7,7 +7,7 @@ import HomeHOC from "./HomeHOC";
 import Toggle from "../Assets/Icons/Toggle.svg";
 import $ from "jquery";
 
-function BranchAndFloorDetails() {
+function BranchDetails() {
   const Details = [
     {
       label: "Branch Name",
@@ -81,9 +81,9 @@ function BranchAndFloorDetails() {
             </h4>
             <Link
               to="/branch-edit"
-              className="flex justify-end p-3 cursor-pointer gap-2"
+              className="flex justify-end p-3 cursor-pointer gap-2 items-center"
             >
-              <span className="text-[#494C54] text-sm	font-medium font-montserrat">
+              <span className="text-[#494C54] text-xl	font-medium font-montserrat">
                 Edit
               </span>
               <img src={Edit} alt="" />
@@ -111,7 +111,7 @@ function BranchAndFloorDetails() {
     </div>
   );
 }
-const BranchAndFloorDetailsComp = HOC(BranchAndFloorDetails);
+const BranchDetailsComp = HOC(BranchDetails);
 
-const WrappedHome = HomeHOC(BranchAndFloorDetailsComp);
+const WrappedHome = HomeHOC(BranchDetailsComp);
 export default WrappedHome;
